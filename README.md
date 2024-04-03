@@ -14,7 +14,7 @@ This Django project provides a secure route for uploading files, encrypting them
 2. **Environment Setup**
 
    - Install Docker and Docker Compose if not already installed.
-   - Replace the placeholders in the `.env` file with your AWS credentials and bucket details.
+   - change .env.example to .env and Replace the placeholders in the `.env` file with your AWS credentials and bucket details.
 
 3. **Build and Run Docker Containers**
 
@@ -34,13 +34,6 @@ This Django project provides a secure route for uploading files, encrypting them
 - **Encryption**: Upon upload, a new encryption key is generated using Fernet encryption. The file content is then encrypted using this key.
 - **Storage**: Encrypted files are stored either in the local file system or in an Amazon S3 bucket, based on the provided configuration.
 - **Security**: Private keys are securely managed, and encryption/decryption processes are handled with utmost care to ensure data confidentiality.
-
-### Replace the placeholder values for AWS access keys and bucket name in the .env file change .env.example to .env:
-
-AWS_ACCESS_KEY=your_aws_access_key
-AWS_SECRET_KEY=your_aws_secret_key
-BUCKET_NAME=your_bucket_name
-AWS_REGION=your_aws_region
 
 ### Development Environment
 
